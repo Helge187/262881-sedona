@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Олег Ширвари](https://up.htmlacademy.ru/htmlcss/19/user/262881).
-* Наставник: `Неизвестно`.
+* Наставник: [Лиза Позднякова](https://htmlacademy.ru/profile/lizzy).
 
 ---
 
