@@ -12,78 +12,70 @@
         </a>
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
-          <li><a href="photo&video.html">Фото и видео</a></li>
+          <li><a href="photo-video.html">Фото и видео</a></li>
           <li><a href="statemap.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
       </header>
       <main>
-          <!-- Ниже не понимаю, как лучше сверстать текст, нужно ли выделить каждую строку в span с разными классами? ведь там везде разные стили -->
+          <!-- Я каждую строку выделил в отдельный параграф и подписал классы, но что делать с номерами? к ним тоже приписать класс "extra-text"? -->
           <section class="welcome-part">
-              <p>Welcome to the gorgeus<br>
-                  Sedona<br>
-                  "Because the Grand
-                  Canyon sucks!"
-              </section>
+              <img src="http://placehold.it/150x100" alt="welcometosedona">
+          </section>
           <section class="reasons">
-              <p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
-              <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
+              <p class="main-text">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+              <p class="extra-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон</p>
           </section>
           <section class="reason1">
-              <h1>Настоящий городок</h1>
-              <p>№1<br>
-              Седона - не аттракцион для туристов, там течет своя жизнь
+              <p class="main-text">Настоящий городок</p>
+              <p>№1</p>
+              <p class="extra-text">Седона - не аттракцион для туристов, там течет своя жизнь
               </p>
+              <img src="http://placehold.it/150x100" alt="real-city">
           </section>
-          <aside class="real-city">
-              <figure><a><img src="http://placehold.it/150x100" alt="real-city"></a></figure>
-          </aside>
           <section class="prons">
               <ul>
                   <li class="prons-description">
-                  <h2>Жилье</h2>
-                   <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>   
+                  <p class="main-text">Жилье</p>
+                   <p class="extra-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>   
                   </li>
                   <li class="prons-description">
-                  <h2>Еда</h2>
-                   <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>   
+                  <p class="main-text">Еда</p>
+                   <p class="extra-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>   
                   </li>
                   <li class="prons-description">
-                  <h2>Сувениры</h2>
-                   <p>Не только китайского, но и местного производства!</p>   
+                  <p class="main-text">Сувениры</p>
+                   <p class="extra-text">Не только китайского, но и местного производства!</p>   
                   </li>
               </ul>
           </section>
-          <aside class="devil's-bridge">
-              <figure><a><img src="http://placehold.it/150x100" alt="devil's-bridge"></a></figure>
-          </aside>
           <section class="reason2">
-              <h3>Там есть мост дьявола</h3>
-              <p>№2<br>
-              Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <p class="main-text">Там есть мост дьявола</p>
+              <p>№2</p>
+              <p class="extra-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <img src="http://placehold.it/150x100" alt="devil's-bridge">
           </section>
           <section class="prons-table">
               <ul>
-                  <li><h4>Небольшая площадь</h4>
-              <p>№3<br>
-              Все достопримечательности находятся очень близко
+                  <li><p class="main-text">Небольшая площадь</p>
+                      <p>№3</p>
+              <p class="extra-text">Все достопримечательности находятся очень близко
               </p></li>
-                  <li><h4>Красивая дорога</h4>
-              <p>№4<br>
-              Ехать в Седону из Лас-Вегаса совсем не скучно!</p></li>
-                  <li><h4>Мало туристов</h4>
-              <p>№5<br>
-              Большинство едет в Гранд Каньон и толпятся там</p></li>
+                  <li><p class="main-text">Красивая дорога</p>
+                      <p>№4</p>
+              <p class="extra-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p></li>
+                  <li><p class="main-text">Мало туристов</p>
+              <p>№5</p>
+              <p class="extra-text">Большинство едет в Гранд Каньон и толпятся там</p></li>
               </ul>
           </section>
-          <!-- здесь блок с формой висит сразу на двух других блоках (белая часть с вопросом и нижняя с картой), как правильно все это дело сверстать?  -->
-      </main>
           <section class="expected-dates">
-              <h5>Заинтересовались?</h5>
-                  <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <p class="main-text">Заинтересовались?</p>
+                  <p class="extra-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           </section>
               <!-- здесь должна быть форма -->
+          </main>
           <footer class="main-footer">
               <p class="hashtag">#VISITSEDONA</p>
               <ul>
