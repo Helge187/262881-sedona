@@ -75,9 +75,24 @@
           <section class="expected-dates">
               <p class="main-text">Заинтересовались?</p>
                   <p class="extra-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+              <img src="img/map.jpg" width="1718" height="748">
           </section>
-              <!-- здесь должна быть форма -->
-          </main>
+            <section class="form">
+              <form class="form-block" method="post" action="https://htmlacademy.ru">
+                  <label for="arrival-date">Дата въезда:</label>
+                    <input class="form-arrival" type="date" id="arrival-date" value="24 апреля 2017">
+                  <label for="departure-date">Дата выезда:</label>
+                    <input class="form-departure" type="date" id="departure-date" value="4 июля 2017">
+                  <label for="adults">Взрослые:</label>
+                    <input class="form-adults" type="number" id="adults" value="2" min="0">
+                  <label for="children">Дети:</label>
+                    <input class="form-children" type="number" id="children" value="0" min="0">
+                  <div class="find-button">
+                      <input type="submit" value="Найти"> 
+                  </div>
+              </form>
+            </section>
+        </main>
           <footer class="main-footer">
               <a href="#">#VISITSEDONA</a>
               <ul>
