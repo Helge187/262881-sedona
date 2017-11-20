@@ -18,13 +18,60 @@
         </ul>
       </nav>
       </header>
-          <!--
-<form>
-<section class="infrastructure"></section>
-<section class="accomodation"></section>
-<section class="cost"></section>
-</form>
+        <form class="filter" method="get" action="htpps://htmlacademy.ru">
+            <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон">
+            <h2 class="visually filter">Фильтр:</h2>
+          <section class="infrastructure">
+              <fieldset>
+                  <legend>Инфраструктура:</legend>
+            <ul>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="swimming-pool-filter" name="swimming-pool">
+                    <label for="swimming-pool-filter">Бассейн</label>
+                </li>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="parking-filter" name="parking">
+                    <label for="parking-filter">Парковка</label>
+                </li>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="wi-fi-filter" name="wi-fi">
+                    <label for="wi-fi-filter">Wi-Fi</label>
+                </li>
+            </ul>
+              </fieldset>
+          </section>
+          <section class="accomodation">
+              <fieldset>
+                  <legend>Тип жилья:</legend>
+            <ul>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="hotels-filter" name="hotels">
+                    <label for="hotels-filter">Гостиница</label>
+                </li>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="motels-filter" name="motels">
+                    <label for="motels-filter">Мотель</label>
+                </li>
+                <li class="filter-option">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="apartments-filter" name="apartments">
+                    <label for="apartments-filter">Апартаменты</label>
+                </li>
+            </ul>
+              </fieldset>
+          </section>
+         <!-- Здесь не очень понимаю, как нужно сделать так, что бы потом использовать эти ползунки через JS
+          <section class="cost">
+                <fieldset>
+                    <legend>Стоимость в сутки (₽):</legend>
+                    <div class="cost-range">
+                        <output name="sum">1500</output>
+                    </div> 
+                    0<input type="range" min="0" max="3000" step="100">3000
+                </fieldset>
+          </section>
 -->
+            <button type="submit" class="filter-button">Показать</button>
+        </form>
      <main class="container">
         <ul class="sort">
           <li><h1>Найдено: 3</h1></li>
