@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
+    <link href="css/style.css" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="innerpage">
       <header class="main-header">
           <nav class="main-navigation">
         <a class="main-header-logo">
@@ -14,19 +17,18 @@
           <li><a href="info.html">Информация</a></li>
           <li><a href="photo-video.html">Фото и видео</a></li>
           <li><a href="statemap.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li class="hotels-current" href="hotels.html">Гостиницы</li>
         </ul>
       </nav>
       </header>
         <form class="filter" method="get" action="htpps://htmlacademy.ru">
-            <img src="img/filter-background.jpg" width="1200" height="562" alt="Фон">
-            <h2 class="visually filter">Фильтр:</h2>
+            <h2 class="visually-hidden filter">Фильтр:</h2>
           <section class="infrastructure">
               <fieldset>
-                  <legend>Инфраструктура:</legend>
+                  <legend class="filter-articles">Инфраструктура:</legend>
             <ul>
                 <li class="filter-option">
-                    <input class="visually-hidden input-checkbox" type="checkbox" id="swimming-pool-filter" name="swimming-pool">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="swimming-pool-filter" name="swimming-pool" checked>
                     <label for="swimming-pool-filter">Бассейн</label>
                 </li>
                 <li class="filter-option">
@@ -42,41 +44,39 @@
           </section>
           <section class="accomodation">
               <fieldset>
-                  <legend>Тип жилья:</legend>
+                  <legend class="filter-articles">Тип жилья:</legend>
             <ul>
                 <li class="filter-option">
-                    <input class="visually-hidden input-checkbox" type="checkbox" id="hotels-filter" name="hotels">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="hotels-filter" name="hotels" checked>
                     <label for="hotels-filter">Гостиница</label>
                 </li>
                 <li class="filter-option">
-                    <input class="visually-hidden input-checkbox" type="checkbox" id="motels-filter" name="motels">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="motels-filter" name="motels" checked>
                     <label for="motels-filter">Мотель</label>
                 </li>
                 <li class="filter-option">
-                    <input class="visually-hidden input-checkbox" type="checkbox" id="apartments-filter" name="apartments">
+                    <input class="visually-hidden input-checkbox" type="checkbox" id="apartments-filter" name="apartments" checked>
                     <label for="apartments-filter">Апартаменты</label>
                 </li>
             </ul>
               </fieldset>
           </section>
-         <!-- Здесь не очень понимаю, как нужно сделать так, что бы потом использовать эти ползунки через JS
           <section class="cost">
                 <fieldset>
-                    <legend>Стоимость в сутки (₽):</legend>
+                    <legend class="filter-articles">Стоимость в сутки (₽):</legend>
                     <div class="cost-range">
                         <output name="sum">1500</output>
                     </div> 
                     0<input type="range" min="0" max="3000" step="100">3000
                 </fieldset>
           </section>
--->
-            <button type="submit" class="filter-button">Показать</button>
+            <div class="show-button"><input type="submit" class="button" value="Показать"></div>
         </form>
      <main class="container">
         <ul class="sort">
           <li><h1>Найдено: 3</h1></li>
               <li><p>Сортировка:</p></li>
-              <li class="by-price">По цене</li>
+              <li class="by-price-current">По цене</li>
               <li><a href="by-type.html">По типу</a></li>
               <li><a href="by-rating.html">По рейтингу</a></li>
         </ul>
@@ -94,8 +94,8 @@
               </h1>
               <p class="type">Гостиница</p>
               <p class="price">От 4000 р.</p>
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>           </section>
+              <a class="info-button" href="#">Подробнее</a>
+              <a class="booking-button" href="#">Забронировать</a>     </section>
                   <section class="rating-stars">
               <p class="rating">Рейтинг: 8,5</p>
               <p class="stars"><img src="img/star.svg" width="18" height="17" alt="stars"></p>
@@ -114,8 +114,8 @@
               </h1>
               <p class="type">Мотель</p>
               <p class="price">От 3000 р.</p>
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
+              <a class="info-button" href="#">Подробнее</a>
+              <a class="booking-button" href="#">Забронировать</a>
                   </section>
                   <section class="rating-stars">
               <p class="rating">Рейтинг: 8,9</p>
@@ -131,12 +131,12 @@
               </p>
                   </section>
                   <section class="text">
-              <h1 class="villas-at-poco-diablo"><a href="sedona/villasatpocodiablo.html">Villas At Poco Diablo</a>
+              <h1 class="hotel-name"><a href="sedona/villasatpocodiablo.html">Villas At Poco Diablo</a>
               </h1>
               <p class="type">Апартаменты</p>
               <p class="price">От 2000 р.</p>
-              <a class="button" href="#">Подробнее</a>
-              <a class="button" href="#">Забронировать</a>
+              <a class="info-button" href="#">Подробнее</a>
+              <a class="booking-button" href="#">Забронировать</a>
                   </section>
                   <section class="rating-stars">
               <p class="rating">Рейтинг: 9,2</p>
@@ -147,14 +147,14 @@
       </main>
           <footer class="main-footer">
               <a href="#">#VISITSEDONA</a>
-              <ul>
-          <li><a class="social-button" href="#"><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
-          <li><a class="social-button" href="#"><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
-          <li><a class="social-button" href="#"><img src="img/youtube.svg" width="20" height="16" alt="YouTube"></a></li>
-              </ul>
+          <ul class="footer-social">
+              <li><a class="social-button" href="#"><img src="img/twitter.svg" width="17" height="15" alt="Twitter"></a></li>
+              <li><a class="social-button" href="#"><img src="img/facebook.svg" width="12" height="22" alt="Facebook"></a></li>
+              <li><a class="social-button" href="#"><img src="img/youtube.svg" width="20" height="16" alt="YouTube"></a></li>
+          </ul>
                   <div class="academy-logo">
-              <p class="website-by">Website by</p>
-              <a class="htmlacademy-logo"><img src="img/logo-htmlacademy.svg" width="768" height="120" alt="HTMLAcademy Logo"></a>
+              <a href="https://htmlacademy.ru" class="html-button">Website by</a>
+              <a class="html-button" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="768" height="120" alt="HTMLAcademy Logo"></a>
                   </div>
           </footer>
   </body>
