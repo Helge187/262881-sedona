@@ -10,11 +10,6 @@ body {
   background-color: #ffffff;
 }
 
-.innerpage {
-    background-color: #ffffff;
-    color: #000000;
-}
-
 a {
   text-decoration: none;
 }
@@ -146,14 +141,13 @@ a {
     font-weight: normal;
 }
 
-.searching {
-    background-color: #766357;
-}
-
-.searching .main-text {
+.find-hotel-button {
     font-size: 21px;
     line-height: 26px;
+    font-weight: bold;
     color: #ffffff;
+    background-color: #766357;
+    text-transform: uppercase;
 }
 
 .form {
@@ -167,7 +161,7 @@ a {
     border: 0px solid #000000;
 }
 
-div .button {
+div .find-button {
     font-size: 21px;
     line-height: 26px;
     background-color: #81b3d2;
@@ -247,12 +241,6 @@ fieldset {
     border: 0;
 }
 
-.legend {
-    font-size: 14px;
-    line-height: 21px;
-    color: #ffffff;
-}
-
 .filter {
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
@@ -269,10 +257,11 @@ legend {
     font-weight: bold;
 }
 
-.show-button .button {
+.show-button {
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
+    color: #ffffff;
     background-color: transparent;
     border: 2px solid #ffffff;
     text-transform: uppercase;
