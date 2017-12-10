@@ -14,6 +14,15 @@ a {
     text-decoration: none;
 }
 
+.main-header {
+    min-width: 1200px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 0 auto;
+}
+
 .main-navigation {
     font-size: 14px;
     line-height: 26px;
@@ -43,32 +52,32 @@ a {
     list-style: none;
 }
 
-.reasons {
-    text-align: center;
-}
-
-.reasons .main-text {
-    font-size: 21px;
-    line-height: 26px;
-}
-
-.reasons .extra-text {
-    font-size: 14px;
-    line-height: 26px;
-    font-weight: normal;
-}
-
-.reason1 {
+.reason1,
+.reason2 {
     background-color: #81b3d2;
 }
 
-.reason1 .main-text {
+.reason1 h2,
+.reason2 h2 {
+/*    background-color: gray;*/
     font-size: 21px;
     line-height: 21px;
+    font-weight: 600;
     color: #ffffff;
 }
 
-.reason1 .extra-text {
+.reason1 span,
+.reason2 span {
+/*    background-color: gray;*/
+    font-size: 14px;
+    line-height: 21px;
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.reason1 p,
+.reason2 p {
+/*    background-color: gray;*/
     font-size: 14px;
     line-height: 21px;
     color: #ffffff;
@@ -92,33 +101,30 @@ a {
     font-weight: normal;
 }
 
-.reason2 {
-    background-color: #81b3d2;
-}
-.reason2 .main-text {
-    font-size: 21px;
-    line-height: 21px;
-    color: #ffffff;
-}
-
-.reason2 .extra-text {
-    font-size: 14px;
-    line-height: 21px;
-    color: #ffffff;
-    font-weight: normal;
-}
-
-.prons-table {
+.table-list {
     background-color: #eeeeee;
 }
 
-.prons-table .main-text {
+.table-list-item1 h2,
+.table-list-item2 h2,
+.table-list-item3 h2 {
     font-size: 21px;
     line-height: 21px;
     color: #000000;
 }
 
-.prons-table .extra-text {
+.table-list-item1 span,
+.table-list-item2 span,
+.table-list-item3 span {
+    font-size: 14px;
+    line-height: 21px;
+    color: #000000;
+    font-weight: normal;
+}
+
+.table-list-item1 p,
+.table-list-item2 p,
+.table-list-item3 p {
     font-size: 14px;
     line-height: 21px;
     color: #000000;
@@ -153,6 +159,9 @@ a {
 
 .form {
     background-color: #ffffff;
+    background-image: url("../img/map.jpg");
+    max-width: 1200px;
+    height: 594px;
 }
 
 .form-block input {
@@ -166,7 +175,13 @@ div .find-button {
     font-size: 21px;
     line-height: 26px;
     background-color: #81b3d2;
-    color: #ffffff
+    color: #ffffff;
+    font-weight: 600;
+    width: 458px;
+    height: 58px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 0;
 }
 
 .main-footer {
@@ -344,32 +359,45 @@ p.price {
 }
 
 /*Сеточные стили*/
+/*
 
 html,
 body {
     min-width: 1200px;
     min-height: 2762px;
 }
+*/
 
-body {
-  /* Временно для сетки */
+.wrapper {
+    /*    background-color: oldlace;*/
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200;
+    margin: 0 auto;
+}
+
 /*
+body {
+   Временно для сетки 
     background-image: url("../img/sedona-index-1200.jpg");
     background-size: auto;
     background-repeat: no-repeat;
-*/
 }
+*/
 
-header {
-    width: 100%;
-    background-color: #ffffff;
+.main-navigation {
+    width: 1200px;
     position: relative;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 /*изначально навигация получилась нормально, но потом, по не понятной мне причине, она снова увеличилась в высоте и вид изменился, теперь не понимаю, в чем дело*/
+/*
 
 .main-navigation {
     position: relative;
@@ -378,47 +406,75 @@ header {
     margin: 0;
     box-sizing: border-box;
 }
+*/
 
 .site-navigation {
+/*    background-color: aqua;*/
     list-style: none;
-    width: 1200px;
-    padding-left: 0;
-    margin: 0;
+    height: 55px;
+    padding: 25px 0 0 0;
+    margin-top: 0;
     display: flex;
 }
 
 .site-navigation li {
-    width: 100%;
+/*    background-color: aquamarine;*/
+    width: 240px;
+    margin-top: 0;
     text-align: center;
-    margin: auto;
+}
+
+.site-navigation li:nth-child(2) {
+    margin-right: 185px;
 }
 
 .main-header-logo {
-    position: absolute;
-    left: 0;
-    right: 0;
+    z-index: 1;
     width: 138px;
     height: 70px;
-    margin: auto;
+    margin-top: 0;
+    margin-bottom: -50px;
 }
 
-li:nth-child(2) {
-    margin-right: 20%;
+.li:nth-child(1),
+.li:nth-child(2) {
+  text-align: left;
+}
+
+.li:nth-child(3),
+.li:nth-child(4) {
+  text-align: right;
+}
+
+.li:nth-child(2) {
+  margin-right: 96px;
+}
+
+.li:nth-child(3) {
+  margin-left: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    margin: 0 auto;
+    padding 0;
 }
 
 .container .welcome {
+/*    border: 1px solid black;*/
     position: relative;
     background-image: url("../img/background-photo.jpg");
     width: 100%;
     background-color: #ffffff;
-    margin: auto;
+    margin: 0;
     background-repeat: no-repeat;
     background-size: 1200px 800px;
 }
 
-.welcome .welcome-sedona {
+.welcome-sedona {
     margin: 75px 355px 75px 375px;
-    position: relative;
 }
 
 .container .welcome::after {
@@ -432,54 +488,73 @@ li:nth-child(2) {
     background-repeat: no-repeat;
 }
 
-.reasons .main-text {
-    width: 440px;
-    display: inline-block;
-    margin-top: 60px;
-    margin-bottom: 15px;
+
+.five-reasons {
+/*    background-color: bisque;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-height: 255px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.five-reasons .main-text {
+    margin: 0;
+    padding-top: 55px;
+    padding-bottom: 25px;
     font-size: 21px;
     line-height: 26px;
 }
 
-.reasons .extra-text {
+.five-reasons .extra-text {
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 50px;
     font-size: 14px;
     line-height: 26px;
     font-weight: normal;
-    margin-bottom: 55px;
 }
 
 .reason1,
 .reason2 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     height: 255px;
 }
 
-/*застрял на этих причинах, хочу вообще весь контейнер перевести в список и потом стилизовать по нумерации (я имею ввиду псевдоселекторы типа :nth-child и тд), насколько это разумно? мне кажется, что так будет проще*/
-
 .reason-text1 {
+/*    border: 1px solid black;*/
     display: flex;
+    order: 1;
     flex-direction: column;
-    justify-content: space-between;
     min-height: 145px;
-    box-sizing: border-box;
+    width: 33%;
+}
+
+.reason-text2 {
+/*    border: 1px solid black;*/
+    display: flex;
+    order: 2;
+    flex-direction: column;
+    min-height: 145px;
     width: 33%;
 }
 
 .reason-text1 h2 {
     text-align: center;
-    width: 125px;
-    margin: 45px 135px 20px 135px;
+    width: 130px;
+    margin: 45px 130px 20px 130px;
     color: #ffffff;
     font-size: 21px;
     line-height: 21px;
 }
 
-.reason-text1 span {
+.reason-text1 span,
+.reason-text2 span {
     text-align: center;
     color: #ffffff;
-    margin: 0px 175px 25px 175px;
+    margin: 0px 170px 25px 170px;
     font-size: 14px;
     line-height: 21px;
     font-weight: normal;
@@ -487,9 +562,27 @@ li:nth-child(2) {
 
 .reason-text1 p {
     text-align: center;
-    border: 1px solid black;
     margin: 0px 50px 55px 50px;
     width: 300px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: normal;
+}
+
+.reason-text2 h2 {
+    text-align: center;
+    width: 160px;
+    margin: 45px 120px 20px 120px;
+    color: #ffffff;
+    font-size: 21px;
+    line-height: 21px;
+}
+
+.reason-text2 p {
+    text-align: center;
+    margin: 0px 50px 55px 50px;
+    width: 305px;
     color: #ffffff;
     font-size: 14px;
     line-height: 21px;
@@ -499,7 +592,7 @@ li:nth-child(2) {
 .reason-image1 {
     width: 67%;
     background-image: url(../img/reason-realcity.jpg);
-    background-position: left;
+    order: 2;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -507,7 +600,156 @@ li:nth-child(2) {
 .reason-image2 {
     width: 67%;
     background-image: url(../img/reason-bridge.jpg);
-    background-position: right;
+    order: 1;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.prons {
+    margin: 0;
+}
+
+.prons-list {
+/*    background-color: aliceblue;*/
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 330px;
+}
+
+.prons-item1,
+.prons-item2,
+.prons-item3 {
+/*    background-color: coral;*/
+    display: flex;
+    align-self: baseline;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 400px;
+    margin: 0;
+}
+
+.prons-item1 img,
+.prons-item2 img,
+.prons-item3 img {
+    margin-top: 60px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.prons-item1 .main-text,
+.prons-item2 .main-text,
+.prons-item3 .main-text {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    padding: 0;
+}
+
+.prons-item1 .extra-text {
+    margin-top: 0;
+    margin-bottom: 85px;
+    margin-left: 65px;
+    margin-right: 70px;
+    padding: 0;
+}
+
+.prons-item2 .extra-text {
+    margin-top: 0;
+    margin-bottom: 85px;
+    margin-left: 55px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.prons-item3 .extra-text {
+    margin-top: 0;
+    margin-bottom: 85px;
+    margin-left: 55px;
+    margin-right: 50px;
+    padding: 0;
+}
+
+.prons-table {
+    margin: 0;
+}
+
+.table-list {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    height: 255px;
+}
+
+.table-list-item1,
+.table-list-item2,
+.table-list-item3 {
+/*    border: 1px solid black;*/
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    align-self: baseline;
+    width: 400px;
+    margin: 0;
+}
+
+.table-list-item1 h2,
+.table-list-item2 h2,
+.table-list-item3 h2 {
+/*    background-color: antiquewhite;*/
+    padding: 0;
+    margin-top: 45px;
+    margin-bottom: 25px;
+    margin-left: 140px;
+    margin-right: 135px;
+}
+
+.table-list-item1 span,
+.table-list-item2 span,
+.table-list-item3 span {
+/*    background-color: antiquewhite;*/
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.table-list-item1 p {
+/*    background-color: antiquewhite;*/
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    margin-left: 85px;
+    margin-right: 90px;
+}
+
+.table-list-item2 p,
+.table-list-item3 p {
+/*    background-color: antiquewhite;*/
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 60px;
+    margin-left: 65px;
+    margin-right: 60px;
+}
+
+
+.find-hotel-button {
+    width: 570px;
+    height: 85px;
+    background-color: #766357;
+    font-weight: 600;
+    border-radius: 0;
+    box-shadow: 0;
+}
+
+.find-button {
+    width: 458px;
+    height: 58px;
+    font-weight: 600;
+    background-color: #669ec0;
+    cursor: pointer;
+    border-radius: 0;
 }
